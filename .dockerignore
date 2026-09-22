@@ -1,0 +1,40 @@
+# ============================================================
+# .dockerignore — installer-nvm
+# ============================================================
+
+# --- Git ---
+.git
+.gitignore
+
+# --- Docker itself ---
+Dockerfile
+Dockerfile.*
+.dockerignore
+docker-compose*.yml
+
+# --- Project runtime artifacts ---
+logs/
+*.log
+*.bak.*
+*.bak
+
+# --- Documentation ---
+README.md
+MOTIVATION.md
+LICENSE
+
+# --- Tests ---
+tests/
+
+# --- IDE / OS junk ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# --- Python / Node (future) ---
+__pycache__/
+*.pyc
+node_modules/

@@ -60,7 +60,6 @@ venv/
 env/
 
 # Docker
-.dockerignore
 docker-compose.override.yml
 
 # Security — NEVER commit these
