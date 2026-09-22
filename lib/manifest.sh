@@ -194,8 +194,8 @@ manifest_count_by_type() {
     fi
 
     local count
-    count=$(grep -c "^${type}|" "$MANIFEST_FILE" 2>/dev/null || echo 0)
-    echo "$count"
+    count=$(grep -c "^${type}|" "$MANIFEST_FILE" 2>/dev/null) || true
+    echo "${count:-0}"
     return 0
 }
 
