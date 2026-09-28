@@ -1,40 +1,66 @@
 # ============================================================
-# .dockerignore — installer-nvm
+# .dockerignore — install-nvm
 # ============================================================
 
-# --- Git ---
+# Git
 .git
 .gitignore
+.gitattributes
 
-# --- Docker itself ---
+# Docker
 Dockerfile
-Dockerfile.*
 .dockerignore
-docker-compose*.yml
+docker-compose.yml
+docker-compose.*.yml
 
-# --- Project runtime artifacts ---
+#logs
 logs/
 *.log
-*.bak.*
+
+# 
 *.bak
+*.bak.*
+*.bak.uninstall.*
 
-# --- Documentation ---
-README.md
-MOTIVATION.md
-LICENSE
+# create-snapshot.sh 
+create-snapshot.sh
+install-nvm-snapshot/
 
-# --- Tests ---
+# tests
 tests/
 
-# --- IDE / OS junk ---
-.vscode/
-.idea/
-*.swp
-*.swo
+# Motivation
+MOTIVATION.md
+
+# OS / editor
 .DS_Store
 Thumbs.db
+*.swp
+*.swo
 
-# --- Python / Node (future) ---
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Python 
 __pycache__/
-*.pyc
+*.py[cod]
+.venv/
+venv/
+
+# Node 
 node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# secrets
+.env
+.env.*
+*.pem
+*.key
+
+# temporary
+*.tmp
+*.temp
+*~
